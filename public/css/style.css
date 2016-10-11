@@ -1,0 +1,22 @@
+.green{
+  color: green;
+}
+
+.red{
+  color: red;
+}
+
+.voteDiv{
+  width: 50%;
+  text-align: center;
+  display: inline-block;
+  float: left;
+}
+
+.userIcon{
+  font-size: 50px;
+}
+
+.toptext{
+  text-align: center;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vote App</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+  <h1 class="toptext">I am...</h1>
+ 
+  <div class="row">
+    <div class="voteDiv">
+        <h2>Male</h2>
+        <span class="glyphicon glyphicon-user userIcon" aria-hidden="true"></span>
+        <% if (data.mVote == 0) { %>
+          <h3>0%</h3>
+        <% } else if (data.mVote > data.fVote) {%>
+          <h3 class="green"><%= Math.floor(data.mVote / (data.fVote + data.mVote) * 100) %>% </h3> 
+        <% } else { %>
+          <h3 class="red"><%= Math.floor(data.mVote / (data.fVote + data.mVote) * 100) %>% </h3> 
+        <% } %>
+      <a href="/voteMan" class="btn btn-success btn-lg">
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        Vote
+      </a>
+    </div>
+    
+    <div class="voteDiv">
+      <h2>Female</h2>
+      <span class="glyphicon glyphicon-user userIcon" aria-hidden="true"></span>
+      <% if(data.fVote == 0) { %>
+        <h3>0%</h3>
+      <% } else if (data.mVote <= data.fVote) {%>
+        <h3 class="green"><%= Math.floor(data.fVote / (data.fVote + data.mVote) * 100) %>% </h3> 
+      <% } else { %>
+        <h3 class="red"><%= Math.floor(data.fVote / (data.fVote + data.mVote) * 100) %>% </h3> 
+      <% } %>
+    <a href="/voteWoman" class="btn btn-success btn-lg">
+      <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+      Vote
+    </a>
+    </div>
+
+  </div>
+
+  
+
+
+</div>
+</body>
+</html>
