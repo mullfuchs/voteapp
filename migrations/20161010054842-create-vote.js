@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: function(queryInterface, Sequelize) {
-    return [queryInterface.createTable('votes', {
+    return queryInterface.createTable('votes', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -22,9 +22,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    }), queryInterface.bulkInsert('votes', [
-        { mVote: 0, fVote: 0, createdAt: Date.now(), updatedAt: Date.now() }
-    ])];
+    });
   },
   down: function(queryInterface, Sequelize) {
     return queryInterface.dropTable('votes');
