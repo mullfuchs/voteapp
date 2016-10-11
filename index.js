@@ -12,7 +12,6 @@ app.get('/', function(req, res) {
   db.vote.find({
     where: {id: 0}
   }).then(function(voteOBJ) {
-    console.log(voteOBJ.dataValues);
     res.render('index', {data: voteOBJ});
   });
   
