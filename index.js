@@ -19,7 +19,7 @@ app.get('/', function(req, res) {
 
 app.get('/voteMan', function(req, res){
   db.vote.find({
-    where: {id: 0}
+    where: {id: 1}
   }).then(function(voteOBJ){
     var voteTotal = voteOBJ.mVote + 1;
     voteOBJ.updateAttributes({
