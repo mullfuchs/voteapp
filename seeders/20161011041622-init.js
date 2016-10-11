@@ -3,7 +3,7 @@
 module.exports = {
   up: function (queryInterface, Sequelize) {
     return queryInterface.bulkInsert('votes', [
-      { mVote: 0, fVote: 0, createdAt: Date.now(), updatedAt: Date.now() }
+      { mVote: 0, fVote: 0 }
     ], {});
     /*
       Add altering commands here.
