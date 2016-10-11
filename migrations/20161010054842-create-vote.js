@@ -16,11 +16,11 @@ module.exports = {
       },
       createdAt: {
         allowNull: true,
-        type: Sequelize.BIGINT
+        type: Sequelize.DATE
       },
       updatedAt: {
         allowNull: true,
-        type: Sequelize.BIGINT
+        type: Sequelize.DATE
       }
     });
   },
